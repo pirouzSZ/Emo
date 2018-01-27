@@ -1,5 +1,5 @@
 # Auto detect text files and perform LF normalization
 * text=auto
-
-*.rb linguist-language=C#
+* linguist-vendored
+*.js linguist-vendored=false
 
