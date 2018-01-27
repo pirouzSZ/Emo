@@ -1,0 +1,12 @@
+C:\Users\pirou\source\repos\Emo1.6\Emo\Emo\bin\Debug\netstandard2.0\Emo.deps.json
+C:\Users\pirou\source\repos\Emo1.6\Emo\Emo\bin\Debug\netstandard2.0\Emo.dll
+C:\Users\pirou\source\repos\Emo1.6\Emo\Emo\obj\Debug\netstandard2.0\Emo.csprojResolveAssemblyReference.cache
+C:\Users\pirou\source\repos\Emo1.6\Emo\Emo\obj\Debug\netstandard2.0\Emo.csproj.CoreCompileInputs.cache
+C:\Users\pirou\source\repos\Emo1.6\Emo\Emo\obj\Debug\netstandard2.0\Emo.App.xaml.g.cs
+C:\Users\pirou\source\repos\Emo1.6\Emo\Emo\obj\Debug\netstandard2.0\Emo.MainPage.xaml.g.cs
+C:\Users\pirou\source\repos\Emo1.6\Emo\Emo\obj\Debug\netstandard2.0\Emo.AssemblyInfoInputs.cache
+C:\Users\pirou\source\repos\Emo1.6\Emo\Emo\obj\Debug\netstandard2.0\Emo.AssemblyInfo.cs
+C:\Users\pirou\source\repos\Emo1.6\Emo\Emo\bin\Debug\netstandard2.0\Emo.pdb
+C:\Users\pirou\source\repos\Emo1.6\Emo\Emo\obj\Debug\netstandard2.0\Emo.EmotionPage.xaml.g.cs
+C:\Users\pirou\source\repos\Emo1.6\Emo\Emo\obj\Debug\netstandard2.0\Emo.dll
+C:\Users\pirou\source\repos\Emo1.6\Emo\Emo\obj\Debug\netstandard2.0\Emo.pdb

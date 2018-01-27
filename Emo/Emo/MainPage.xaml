@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Emo"
+             x:Class="Emo.MainPage"
+             BackgroundColor="#127ac7"
+             NavigationPage.HasNavigationBar="False">
+
+    <StackLayout VerticalOptions="Center" Spacing="20">
+
+        <Image Source="Resource/Personal.png" HorizontalOptions="Center"/>
+        <Label 
+			Text="Welcome to Emo"
+			TextColor="White"
+			FontSize="25" 
+			FontAttributes="Bold"  
+			HorizontalOptions="Center" />
+        <Label 
+			Text="This App Detects your Emotions" 
+			TextColor="White"
+			FontSize="13" 
+			HorizontalOptions="Center" />
+        <Button 
+			Text="GET STARTED" 
+			TextColor="White"
+			BackgroundColor="#1dabf0"
+            Clicked="btn_NextPage"/>
+        
+        <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="EndAndExpand">
+            <Label 
+			Text="Created by:" 
+			TextColor="White"
+			FontSize="10" 
+			HorizontalOptions="Center"/>
+        <Label 
+			Text="Pirouz Sourati Zanjani" 
+			TextColor="White"
+			FontSize="10" 
+			HorizontalOptions="Center"
+             VerticalOptions="Fill" />
+        </StackLayout>
+
+    </StackLayout>
+
+</ContentPage>

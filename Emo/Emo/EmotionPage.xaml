@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Emo.EmotionPage"
+             NavigationPage.HasNavigationBar="False"
+             NavigationPage.HasBackButton="False"
+             BackgroundColor="White">
+    <AbsoluteLayout>
+    <Grid RowSpacing="10" ColumnSpacing="5" Padding="15">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+
+        <Image x:Name="SelectedImage" Grid.Row="0" Grid.RowSpan="4" Grid.Column="0" Grid.ColumnSpan="12" BackgroundColor="Gray" IsVisible="True"/>
+        <Button Grid.Row="4" Grid.RowSpan="1" Grid.Column="1" Grid.ColumnSpan="5" Text="Select Image" BackgroundColor="#127ac7" Clicked="Btn_selectImage" TextColor="White"/>
+        <Button Grid.Row="4" Grid.RowSpan="1" Grid.Column="6" Grid.ColumnSpan="5" Text="Get Emotions" BackgroundColor="#127ac7" Clicked="Btn_GetEmotion" TextColor="White"/>
+
+        <Label Text="Results:" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" TextColor="Black"/>
+
+
+        <ActivityIndicator Color="#127ac7" IsRunning="{Binding Source={x:Reference EmotionResults}, Path=IsLoading }"  
+                           AbsoluteLayout.LayoutBounds="0.5, 0.5, 100, 100" 
+                           AbsoluteLayout.LayoutFlags="PositionProportional" />
+        
+
+        <Label x:Name="EmotionResults" Grid.Row="6" Grid.RowSpan="5" Grid.Column="0" Grid.ColumnSpan="9"/>
+
+    </Grid>
+    </AbsoluteLayout>
+</ContentPage>
