@@ -45,6 +45,7 @@ bin\Debug\Mono.Android.pdb
 bin\Debug\mscorlib.pdb
 bin\Debug\Plugin.Media.Abstractions.pdb
 bin\Debug\Plugin.Permissions.Abstractions.pdb
+bin\Debug\SQLite-net.pdb
 bin\Debug\System.Core.pdb
 bin\Debug\System.pdb
 bin\Debug\System.IO.Compression.pdb
@@ -74,6 +75,7 @@ obj\Debug\linksrc\Mono.Android.pdb
 obj\Debug\linksrc\mscorlib.pdb
 obj\Debug\linksrc\Plugin.Media.Abstractions.pdb
 obj\Debug\linksrc\Plugin.Permissions.Abstractions.pdb
+obj\Debug\linksrc\SQLite-net.pdb
 obj\Debug\linksrc\System.Core.pdb
 obj\Debug\linksrc\System.pdb
 obj\Debug\linksrc\System.IO.Compression.pdb

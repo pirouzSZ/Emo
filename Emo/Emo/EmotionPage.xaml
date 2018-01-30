@@ -5,7 +5,7 @@
              NavigationPage.HasNavigationBar="False"
              NavigationPage.HasBackButton="False"
              BackgroundColor="White">
-    <AbsoluteLayout>
+    
     <Grid RowSpacing="10" ColumnSpacing="5" Padding="15">
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />
@@ -49,7 +49,9 @@
         
 
         <Label x:Name="EmotionResults" Grid.Row="6" Grid.RowSpan="5" Grid.Column="0" Grid.ColumnSpan="9"/>
+        <Button Grid.Row="7" Grid.Column="9" Grid.ColumnSpan="3" Text="Save" FontSize="12" BackgroundColor="#127ac7" BorderRadius="35" Clicked="Btn_save" TextColor="White"/>
+        <Button Grid.Row="8" Grid.Column="9" Grid.ColumnSpan="3" Text="Log" FontSize="12" BackgroundColor="#127ac7" BorderRadius="35" Clicked="Btn_log" TextColor="White"/>
 
     </Grid>
-    </AbsoluteLayout>
+    
 </ContentPage>

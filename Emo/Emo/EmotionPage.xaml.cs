@@ -9,20 +9,54 @@ using System.Net.Http;
 using Newtonsoft.Json.Linq;
 using Plugin.Media.Abstractions;
 using Newtonsoft.Json;
+using SQLite;
+using System.Collections.ObjectModel;
 
 namespace Emo
 {
+    public class SavedEmotion
+    {
+        [PrimaryKey, AutoIncrement]
+        public long Date { get; set; }
+        [MaxLength(255)]
+        public string Emotion { get; set; }
+    }
+
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class EmotionPage : ContentPage
     {
         static string ApiKey = "8a8748c42dcc4309951bdaa072bbe7f6";
         public string imagePath;
+        private SQLiteAsyncConnection _connection;
+        public string highestEmotion = null;
 
 
         public EmotionPage()
         {
             InitializeComponent();
+            _connection = DependencyService.Get<ISQLiteDb>().GetConnection();
         }
+
+
+        private async void Btn_save (object sender, EventArgs e)
+        {
+            await _connection.CreateTableAsync<SavedEmotion>();
+            var savedEmotions = await _connection.Table<SavedEmotion>().ToListAsync();
+
+            
+     
+            var savedEmotion = new SavedEmotion { Date = DateTime.Now.Ticks, Emotion = highestEmotion };
+            await _connection.InsertAsync(savedEmotion);
+            
+        }
+
+
+        private async void Btn_log (object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Log());
+        }
+
+
 
         private async void Btn_selectImage(object sender, EventArgs e)
         {
@@ -134,13 +168,14 @@ namespace Emo
                 var emotions = JsonConvert.DeserializeObject<Emotion[]>(responseContent);
                 var scores = emotions[0].scores;
                 var highestScore = scores.Values.OrderByDescending(score => score).First();
-                var highestEmotion = scores.Keys.First(key => scores[key] == highestScore);
+                highestEmotion = scores.Keys.First(key => scores[key] == highestScore);
 
                 foreach (var score in scoreList)
                 {
                     EmotionResults.Text = "Detected Emotion: " + highestEmotion
                      +'\n' +"\n Full Analysis:\n"+ score.ToString();
                 }
+
 
             }
         }
