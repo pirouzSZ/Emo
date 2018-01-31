@@ -15,8 +15,7 @@ namespace Emo
         public Log()
         {
             InitializeComponent();
-            _connection = DependencyService.Get<ISQLiteDb>().GetConnection();
-            
+            _connection = DependencyService.Get<ISQLiteDb>().GetConnection();  
         }
 
         protected override async void OnAppearing()

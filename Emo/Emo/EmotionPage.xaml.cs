@@ -40,14 +40,18 @@ namespace Emo
 
         private async void Btn_save (object sender, EventArgs e)
         {
-            await _connection.CreateTableAsync<SavedEmotion>();
-            var savedEmotions = await _connection.Table<SavedEmotion>().ToListAsync();
-
-            
-     
-            var savedEmotion = new SavedEmotion { Date = DateTime.Now.Ticks, Emotion = highestEmotion };
-            await _connection.InsertAsync(savedEmotion);
-            
+            if (highestEmotion == null)
+            {
+                await DisplayAlert("Sorry", "Get Emotion Results first", "ok");
+            }
+            else
+            {
+                await _connection.CreateTableAsync<SavedEmotion>();
+                var savedEmotions = await _connection.Table<SavedEmotion>().ToListAsync();
+                var savedEmotion = new SavedEmotion { Date = DateTime.Now.Ticks, Emotion = highestEmotion };
+                await _connection.InsertAsync(savedEmotion);
+                await DisplayAlert("Done", "Results Saved", "ok");
+            }
         }
 
 
